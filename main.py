@@ -7,9 +7,11 @@ bot = telebot.TeleBot('6976617046:AAGHB1JUaHsypfZGGE6hHIsyYcbtOP4t0FA')
 def main(message):
     bot.send_message(message.chat.id, "*Hello my friend. Let's begin our journey into a Python!*\nWrite this command firstly:\n/commands", parse_mode='Markdown')
 
+
 @bot.message_handler(commands=['link'])
 def main(message):
     bot.send_message(message.chat.id, 'This is [My VK page](https://vk.com/zabik_maks)', parse_mode='Markdown')
+
 
 @bot.message_handler(commands=['commands'])
 def main(message):
